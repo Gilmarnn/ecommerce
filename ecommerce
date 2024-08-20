@@ -1,0 +1,5 @@
+pip install django
+ django-admin startproject ecommerce
+  cd ecommerce
+   python manage.py startapp loja
+   python manage.py runserver
