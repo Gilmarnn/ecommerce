@@ -1,5 +1,36 @@
-pip install django
- django-admin startproject ecommerce
-  cd ecommerce
-   python manage.py startapp loja
-   python manage.py runserver
+pip install django                         #instalar django
+ django-admin startproject ecommerce       #iniciar projeto
+  cd ecommerce                             #entar no arquivo
+   python manage.py startapp loja          #criar app
+   python manage.py runserver              #rodar servidor
+Settings.py
+   Install APPS
+
+      'loja"
+URL.py
+
+from django. urls import path,include
+
+urlpatterns[
+
+path(''/, include('loja.urls'))
+
+]
+
+
+loja
+wiews.py
+from django.shortcuts import render]
+
+def home(request):
+ return render(request, 'home.html')
+
+urls.py
+from django. urls import path
+from.wiews import *
+path(''/, home, name= 'home')
+
+templates
+  home.html
+  carrinho.html
+  loja.html
